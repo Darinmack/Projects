@@ -4,11 +4,11 @@ from dotenv import load_dotenv
 #dotenv loads variables from local .env file 
 
 load_dotenv() # reads .env and inject ODDS_API_KEY into process env
-API_KEY=os.getenv("ODSS_API_KEY") # pulls val at import time
+API_KEY=os.getenv("ODDS_API_KEY") # pulls val at import time
 BASE = "https://api.the-odds-api.com/v4"
 TIMEOUT= 25 #just to stop program from hanging/stuck in case of stalling
 
-def get_nfl_odss(markets="spreads,totals,h2h", regions="us", odds_format="american"):
+def get_nfl_odds(markets="spreads,totals,h2h", regions="us", odds_format="american"):
     if not API_KEY:
         raise RuntimeError("Missing ODDS_API_KEY in .env")
     url= f"{BASE}/sports/americanfootball_nfl/odds/"
