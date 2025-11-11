@@ -1,0 +1,139 @@
+/*#background-container */ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+   background-color: #f0f0f0; /* Light grey background */
+    height: 100%; 
+   background-image: url(https://st2.depositphotos.com/1194063/8994/i/450/depositphotos_89940720-stock-photo-colorful-spices-on-wooden-table.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   /* Adjust the background size to cover less area */
+    background-size: cover;
+   
+}
+
+#view{
+    color:rgb(113, 178, 216);
+    text-shadow:  2px 2px 4px rgba(0, 0, 0, 7);
+}
+
+.top-back {
+   /* background-image: url(https://st2.depositphotos.com/1194063/8994/i/450/depositphotos_89940720-stock-photo-colorful-spices-on-wooden-table.jpg);
+   */
+   
+   /* height:100%;
+    width: 100%;
+    /*
+    background-size: cover;
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+#fin {
+    color: yellow;
+    margin-bottom: 20px;
+    text-shadow:  2px 4px rgba(0, 0, 0, 7);
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+#sea {
+    width: 700px; 
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px ;
+    outline: none;
+    border: 1px solid transparent; /* Transparent border initially */
+    
+}
+
+#sea:hover,
+#sea:focus {
+    border-color: rgb(231, 228, 19);
+   
+     /* Red border on hover or focus */
+}
+
+
+
+#btn {
+  
+      padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    color: rgb(94, 19, 192); /* Dark text color */
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#btn:hover {
+    background-color: #061f3a; /* Darker blue on hover */
+    color: #fff; /* White text color on hover */
+}
+
+
+
+#bottom-recipe {
+    padding-top: 20px;
+   /* background-image: url("./some-img.png");
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Adjust the background size to cover less area */
+    background-size:cover;
+   /* height: 2000px;
+    width:100%; 
+    padding-bottom: 0px;
+    */
+}
+
+#categoriesContainer{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 30px;
+    padding: 20px;
+}
+
+.categoryBtn{
+    text-align: center;
+    padding: 15px;
+    border: 6px solid green;
+    border-radius: 6px;
+}
+#mealsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 20px;
+}
+
+.mealBtn {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#mealDetailsContainer{
+    font-size: large;
+    font-style: italic;
+    color: rgb(236, 184, 11);
+    text-shadow:  2px 2px 4px rgba(0, 0, 0, 9);
+    
+    
+}
+
+
+

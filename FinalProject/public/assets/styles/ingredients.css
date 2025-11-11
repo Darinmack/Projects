@@ -1,0 +1,60 @@
+/*
+.cont{
+    border: 10px solid rgb(187, 214, 30);
+    height: 100%; 
+    padding-top: 20px;
+    background-image: url("./some-img.png");
+   
+      
+     background-position: center;
+     background-repeat: no-repeat;
+     /* Adjust the background size to cover less area 
+     background-size:cover;
+}
+
+html, body{
+    height: 100%;
+}
+
+*/
+#more-ingred{
+    font-size: xx-large;
+    color: aqua;
+}
+
+#getIngredientsBtn{
+    border-radius: 6px;
+    color: blue;
+    font-size: 40px;
+    border: none;
+    text-align: center;
+    padding: 15px;
+    width: 600px;
+    transition: all 0.5s;
+    margin:5px;
+    display:inline-block;
+
+}
+
+
+  
+  
+  
+  #getIngredientsBtn:hover  {
+    background-color: blueviolet;
+  }
+  
+ 
+
+.cont {
+    border: 10px solid rgb(187, 214, 30);
+    height: 180vh; /* Adjust the height to your preference (80% of the viewport height in this case) */
+    padding-top: 20px;
+    background-image: url("./some-img.png");
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Adjust the background size to cover more area */
+    background-size: cover;
+}
+

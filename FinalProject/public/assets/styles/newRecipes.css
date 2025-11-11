@@ -1,0 +1,33 @@
+.containnew{
+    
+    padding-left: 5px;
+   
+    border: 10px solid #006199;
+    width:auto;
+    height: 800px;
+    
+    padding: 30px;
+
+    height: 180vh; /* Adjust the height to your preference (80% of the viewport height in this case) */
+    padding-top: 20px;
+    background-image: url("./form-img.png");
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Adjust the background size to cover more area */
+    background-size: cover;
+
+    
+}
+
+label.info{
+    color: white;
+    font-size: xx-large;
+    padding-top: 10px;
+}
+
+input[type="text"] {
+    height: 50px;
+    width: 200x;
+    size: 500px;
+    }

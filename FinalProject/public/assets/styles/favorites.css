@@ -1,0 +1,73 @@
+
+#left-col {
+    float: left;
+    width: 300px; /* Adjust the width of the left column as needed */
+    border: 4px solid burlywood;
+    padding-right: 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+#right-col {
+
+    margin-left: 20px; /* Adjust margin to accommodate the left column width and border */
+    padding: 10px;
+     border-left: 6px solid #ccc; 
+}
+
+
+
+#menu {
+    font-size: .9rem;
+    
+}
+
+#menu ul {
+    list-style-type: none; /* Remove default list style */
+    padding: 10px; /* Adjust padding */
+    margin: 0; /* Remove default margin */
+}
+
+#menu ul li {
+    margin-bottom: 40px; /* Add margin between list items */
+    font-size: xx-large;
+}
+
+#menu ul li a {
+    text-decoration: none; /* Remove default link underline */
+    color: blue; /* Change link color */
+}
+
+#search button {
+    width: 250px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    cursor: pointer;
+    background: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Adjust border radius to match input field */
+}
+
+#fav{
+    color: purple;
+}
+
+#menu ul li a:hover{
+    color: grey;
+}
+
+
+.container-2{
+            padding-left: 5px;
+            margin-left: 30px;
+            border: 10px solid #009900;
+            width: 800px;
+            height: 800px;
+            padding: 30px;
+    
+}
+
+#add{
+    margin-top: 2px;
+    padding-top: 3px;
+}
