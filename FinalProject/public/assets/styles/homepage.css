@@ -1,0 +1,119 @@
+body{
+ 
+  background-image: url("./back-img.png");
+  /* height: 100%;
+ /* width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Adjust the background size to cover less area */
+  background-size: cover;
+  
+  
+}
+#make{
+  color: rgb(177, 168, 168);
+}
+
+#top-container{
+  color: rgb(228, 241, 241);
+  font-size: 45px; /* Adjust the font size as needed */
+  letter-spacing: 3px;
+  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 8);
+}
+
+.spaced-out{
+  color:rgb(132, 201, 241);
+  font-size: 45px; /* Adjust the font size as needed */
+  letter-spacing: 3px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 7);
+}
+#bro{
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 7);
+
+}
+
+.bottom{
+  color: white;
+  font-size:40px;
+  letter-spacing: 4px;
+  text-align: center; 
+  margin-top: 50px; 
+}
+
+.bottom h2 {
+  color: #f7ebeb; 
+  font-size: 45px; 
+  margin-bottom: 10px; 
+}
+
+.bottom h3 {
+  color: #f7ebeb; 
+  font-size: 40px; 
+  margin-bottom: 10px; 
+}
+
+.bottom h4 {
+  color: #f7ebeb;  
+  font-size: 35px; 
+  margin-bottom: 10px; 
+}
+
+.btn-primary {
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; 
+}
+
+.carousel-inner{
+    background-color: #ecdd4e;
+    /*#a87860;
+   */
+  
+    
+}
+
+
+.con{
+    width: 600px;
+     height: auto;
+    /* display: inline-block; */
+     
+ }
+  
+ 
+ .carousel-item {
+     text-align: center; /* Center the content horizontally */
+   }
+   
+   .image-container {
+     position: relative; /* Make the container positioned */
+     display: inline-block; /* Ensure the container behaves as a block-level element */
+   }
+   
+   .carousel-caption {
+     position: absolute; /* Position the caption absolutely */
+     bottom: 0; /* Position the caption at the bottom of the container */
+     left: 0; /* Align the caption to the left */
+     max-width: 100%; /* Ensure the caption spans the entire width of the container */
+     background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+     color: #fff; /* Optional: Set text color to white */
+     padding: 10px; /* Optional: Add padding for better readability */
+   }
+ 
+
+   #splash{
+    width:100px;
+   }

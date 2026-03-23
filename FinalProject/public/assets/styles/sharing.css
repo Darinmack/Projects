@@ -1,0 +1,57 @@
+
+.container {
+    background-color: rgb(49, 170, 100);
+    width:max-content;
+    
+    
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #140aa5;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+.card{
+    width: 20rem;
+    height: 8rem;
+    padding-top: 20px;
+}
+
+.card-img-top{
+   width: max-content;
+}
+
+#tik{
+    background-color: pink;
+}
+
+#face{
+    background-color: darkblue;
+    width: 100px;
+}
+
+#twitt{
+    background-color: lightblue;
+}
+
+#insta{
+    background-color: rgb(223, 85, 241); 
+}
+
