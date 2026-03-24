@@ -1,0 +1,10 @@
+github notes
+
+git add .
+git commit -m "describing what i did"
+git push origin main
+
+
+on real Linux server, SHH logs be at 
+/var/log/auth.log
+/var/log/secure
