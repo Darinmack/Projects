@@ -67,7 +67,7 @@ def enrich_ip(ip_address):
     conn.close()
     
     
-    print(f"[+] Intel compiled and threat check complete for {ip_address} - abuse score: {data['abuseConfidenceScore']}")
+    print(f"[+] Enriched {ip_address} - abuse score: {data['abuseConfidenceScore']}")
     return data 
     
     
