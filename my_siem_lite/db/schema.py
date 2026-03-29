@@ -70,7 +70,7 @@ def init_db():
                 details       TEXT,
                 resolved     INTEGER DEFAULT 0,
                 created_at   TEXT DEFAULT(datetime('now')),
-                FOREIGN KEY (source_ip) REFERENCES ip_repuation(ip_address)
+                FOREIGN KEY (source_ip) REFERENCES ip_reputation(ip_address)
             )    
          """)
     
