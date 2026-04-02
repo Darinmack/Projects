@@ -10,3 +10,9 @@ on real Linux server, SHH logs be at
 /var/log/secure
 
 
+ GROUP BY collapsed all the individual event rows down into one row per IP with a count, and 
+ HAVING filtered that grouped result to only show IPs that met the threshold.
+
+ WHERE filters rows before grouping and HAVING  filters after grouping
+ HAVING was important at the end of that because you cant filter by count until
+ after groupig happened.
