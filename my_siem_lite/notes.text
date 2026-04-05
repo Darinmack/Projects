@@ -1,4 +1,4 @@
-github notes
+ notes
 
 git add .
 git commit -m "describing what i did"
@@ -15,4 +15,4 @@ on real Linux server, SHH logs be at
 
  WHERE filters rows before grouping and HAVING  filters after grouping
  HAVING was important at the end of that because you cant filter by count until
- after groupig happened.
+ after grouping happened.
