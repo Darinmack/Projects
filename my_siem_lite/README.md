@@ -19,6 +19,8 @@ Built to able to apply cybersecurity fundamentals in a practical, real world con
 
 
 ### Project Structure
+
+```
 my_siem_lite/
 ├── data/
 │   └── auth.log          # SSH log input
@@ -31,7 +33,7 @@ my_siem_lite/
 │   ├── detector.py       # Brute force anomaly detection
 │   └── routes.py         # Flask REST API endpoints
 └── run.py                # Full pipeline runner
-
+```
 
 ### How To Run
 
