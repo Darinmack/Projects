@@ -8,10 +8,17 @@ API_KEY=os.getenv("ODDS_API_KEY") # pulls val at import time
 BASE = "https://api.the-odds-api.com/v4"
 TIMEOUT= 25 #just to stop program from hanging/stuck in case of stalling
 
-def get_nfl_odds(markets="spreads,totals,h2h", regions="us", odds_format="american"):
+SUPPORTED_SPORTS = {
+    "nfl": "americanfootball_nfl",
+    "nba": "basketball_nba"
+}
+def get_odds(sport="nfl", markets="spreads,totals,h2h", regions="us", odds_format="american"):
     if not API_KEY:
         raise RuntimeError("Missing ODDS_API_KEY in .env")
-    url= f"{BASE}/sports/americanfootball_nfl/odds/"
+    sport_key= SUPPORTED_SPORTS.get(sport)
+    if not sport_key:
+        raise ValueError(f"Unsupported sport '{sport}'. Choose from: {(SUPPORTED_SPORTS.keys())}")
+    url= f"{BASE}/sports/{sport_key}/odds/"
     params = {
         "apiKey": API_KEY,
         "regions": regions,

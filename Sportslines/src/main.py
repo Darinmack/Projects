@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 from db import connect
-from odds_api import get_nfl_odds
+from odds_api import get_odds
 
 def to_iso_utc(dt_str):
      # API usually returns ISO already; this is a safety shim.
@@ -16,8 +16,8 @@ def to_iso_utc(dt_str):
 def now_ts():
     return int(datetime.now(timezone.utc).timestamp())
 
-def snapshot_once():
-    data = get_nfl_odds()
+def snapshot_once(sport="nfl"):
+    data = get_odds(sport=sport)
     conn = connect()
     cur = conn.cursor()
     ts = now_ts()
@@ -28,7 +28,7 @@ def snapshot_once():
         cur.execute("""
             INSERT OR REPLACE INTO games(game_id, sport_key, commence_time, home_team, away_team)
             VALUES(?,?,?,?,?)
-        """, (game_id, g.get("sport_key","americanfootball_nfl"), commence_iso,
+        """, (game_id, g.get("sport_key",""), commence_iso,
               g.get("home_team",""), g.get("away_team","")))
 
         for b in g.get("bookmakers", []):
@@ -62,5 +62,6 @@ def snapshot_once():
     conn.close()
 
 if __name__ == "__main__":
-    snapshot_once()
-    print("Snapshot saved.")
+    for sport in ["nfl", "nba"]:
+        snapshot_once(sport= sport)
+   # print("Snapshot saved.")
