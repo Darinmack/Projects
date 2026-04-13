@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+#SportsLines
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A real-time sports odds tracking dashboard for NBA, NFL  & MLB games.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+### What it does 
+- Fetches live odds (spreads, totals, moneyline) from 10+ sportsbooks via the-odds-api
+- Stores timestamped snapshots in a local SQLite database
+- Detects line movement by comparing latest lines against historical medians
+- Serves data via a Flask REST API
+- Displays games, odds, and hot moves on a React dashboard
+- Sends Discord alerts when significant line moves are detected
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## What it does
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Fetches live odds (spreads, totals, moneyline) from 10+ sportsbooks via the-odds-api
+- Stores timestamped snapshots in a local SQLite database
+- Detects line movement by comparing latest lines against historical medians
+- Serves data via a Flask REST API
+- Displays games, odds, and hot moves on a React dashboard
+- Sends Discord alerts when significant line moves are detected
 
-### `npm test`
+## Tech stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Backend** — Python, Flask, SQLite
+- **Frontend** — React
+- **Data** — the-odds-api
+- **Alerts** — Discord webhooks
 
-### `npm run build`
+## Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Python 3.10+
+- Node.js 18+
+- An API key from [the-odds-api.com](https://the-odds-api.com)
+- A Discord webhook URL
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Clone the repo
+git clone https://github.com/Darinmack/Projects.git
+cd Projects/Sportslines
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### 2. Set up the Python environment
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Configure environment variables
+Create a `.env` file in the root directory:
+ODDS_API_KEY=your_api_key_here
+DISCORD_WEBHOOK=your_discord_webhook_url_here
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 4. Run the Flask backend
+cd src
+python app.py
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 5. Start the scheduler
+In a separate terminal:
+cd src
+python scheduler.py
 
-## Learn More
+### 6. Start the React dashboard
+In a separate terminal:
+cd dashboard
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The dashboard will open at `http://localhost:3000`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How the line movement detection works
 
-### Code Splitting
+Every time the scheduler runs, it snapshots current odds from all available books. For each game/book/selection combination, it calculates the median line across all stored snapshots and compares it to the latest line. If the difference exceeds the threshold, it's flagged as a hot move and a Discord alert is fired.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Project structure
+Sportslines/
+├── src/
+│   ├── app.py          # Flask API
+│   ├── db.py           # Database setup and connection
+│   ├── main.py         # Odds snapshot logic
+│   ├── moves.py        # Line movement detection
+│   ├── odds_api.py     # the-odds-api client
+│   └── scheduler.py    # Automated polling and alerts
+├── dashboard/          # React frontend
+├── requirements.txt
+└── .env                # Not committed - see setup
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
