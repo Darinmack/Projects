@@ -62,6 +62,6 @@ def snapshot_once(sport="nfl"):
     conn.close()
 
 if __name__ == "__main__":
-    for sport in ["nfl", "nba"]:
+    for sport in ["nfl", "nba", "mlb"]:
         snapshot_once(sport= sport)
    # print("Snapshot saved.")

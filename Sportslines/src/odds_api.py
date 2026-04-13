@@ -10,7 +10,8 @@ TIMEOUT= 25 #just to stop program from hanging/stuck in case of stalling
 
 SUPPORTED_SPORTS = {
     "nfl": "americanfootball_nfl",
-    "nba": "basketball_nba"
+    "nba": "basketball_nba",
+    "mlb": "baseball_mlb"
 }
 def get_odds(sport="nfl", markets="spreads,totals,h2h", regions="us", odds_format="american"):
     if not API_KEY:
